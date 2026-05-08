@@ -67,7 +67,7 @@ Almacena las compras realizadas por los clientes.
 
 ---
 
-# Funcionalidades implementadas
+# Consultas utilizando lenguaje de consulta de MondoDB
 
 ## Consultas básicas
 - Inserción de documentos
