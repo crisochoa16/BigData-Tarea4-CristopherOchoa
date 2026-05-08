@@ -69,7 +69,7 @@ Almacena las compras realizadas por los clientes.
 
 # Funcionalidades implementadas
 
-## Consultas básicas (CRUD)
+## Consultas básicas
 - Inserción de documentos
 - Selección de documentos
 - Actualización de documentos
@@ -95,15 +95,6 @@ Almacena las compras realizadas por los clientes.
 - $avg
 - $min
 - $max
-
----
-
-# Tecnologías utilizadas
-
-- MongoDB
-- MongoDB Compass
-- mongosh
-- GitHub
 
 ---
 
