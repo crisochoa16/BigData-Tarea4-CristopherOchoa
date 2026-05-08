@@ -1,0 +1,37 @@
+use Logitech
+
+db.pedidos.insertMany([
+  {
+    clienteId: ObjectId("69f394d1617b24d77138d1e6"),
+    fechaPedido: new Date("2026-04-30"),
+    estado: "Pagado",
+    productos: [
+      {
+        nombre: "Producto 1",
+        cantidad: 1,
+        precioUnitario: 252860
+      }
+    ],
+    total: 252860,
+    metodoPago: "Tarjeta de crédito"
+  },
+  {
+    clienteId: ObjectId("69f394d1617b24d77138d1e7"),
+    fechaPedido: new Date("2026-04-30"),
+    estado: "Pendiente",
+    productos: [
+      {
+        nombre: "Producto 1",
+        cantidad: 1,
+        precioUnitario: 200000
+      },
+      {
+        nombre: "Producto 2",
+        cantidad: 1,
+        precioUnitario: 248888
+      }
+    ],
+    total: 448888,
+    metodoPago: "Transferencia"
+  }
+])

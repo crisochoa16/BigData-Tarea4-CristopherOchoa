@@ -1,0 +1,46 @@
+// =====================================
+// CONSULTAS CON FILTROS Y OPERADORES
+// =====================================
+
+// 1. Filtro por categoría Mouse
+db.productos.find({
+  categoria: "Mouse"
+})
+
+
+// 2. Filtro con operador $gt
+// Productos con precio mayor a 300000
+db.productos.find({
+  precio: { $gt: 300000 }
+})
+
+
+// 3. Filtro con operador $lt
+// Productos con stock menor a 8
+db.productos.find({
+  stock: { $lt: 8 }
+})
+
+
+// 4. Filtro con rango $gte y $lte
+// Productos entre 300000 y 400000
+db.productos.find({
+  precio: {
+    $gte: 300000,
+    $lte: 400000
+  }
+})
+
+
+// 5. Filtro JOIN con $lookup
+// Une pedidos con clientes mediante clienteId
+db.pedidos.aggregate([
+  {
+    $lookup: {
+      from: "clientes",
+      localField: "clienteId",
+      foreignField: "_id",
+      as: "datosCliente"
+    }
+  }
+])

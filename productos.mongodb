@@ -1,0 +1,36 @@
+use Logitech
+
+const categorias = ["Mouse", "Teclado", "Audífonos"];
+
+const modelosMouse = ["G903", "G502", "G203", "G309", "G305"];
+const modelosTeclado = ["G213", "G915", "G413", "G513", "G713"];
+const modelosAudio = ["G733", "A50", "G522", "A20X", "G325"];
+
+for (let i = 1; i <= 100; i++) {
+
+  let categoria = categorias[Math.floor(Math.random() * categorias.length)];
+  let modelo = "";
+  let precio = 0;
+
+  if (categoria == "Mouse") {
+    modelo = modelosMouse[Math.floor(Math.random() * modelosMouse.length)];
+    precio = Math.floor(Math.random() * 100000) + 50000;
+  } else if (categoria == "Teclado") {
+    modelo = modelosTeclado[Math.floor(Math.random() * modelosTeclado.length)];
+    precio = Math.floor(Math.random() * 200000) + 80000;
+  } else {
+    modelo = modelosAudio[Math.floor(Math.random() * modelosAudio.length)];
+    precio = Math.floor(Math.random() * 250000) + 100000;
+  }
+
+  db.productos.insertOne({
+    nombre: "Logitech " + modelo + " " + i,
+    categoria: categoria,
+    marca: "Logitech",
+    precio: precio,
+    stock: Math.floor(Math.random() * 50) + 5,
+    descripcion: "Periférico Logitech tipo " + categoria,
+    disponible: true,
+    fechaCreacion: new Date()
+  });
+}

@@ -1,0 +1,25 @@
+use Logitech
+
+db.clientes.insertMany([
+  {
+    nombre: "Cristopher Ochoa",
+    email: "cochoar@gmail.com",
+    telefono: "3158787723",
+    ciudad: "Neiva",
+    direccion: "Cra 30a sur # 40-20"
+  },
+  {
+    nombre: "Carlos Ramos",
+    email: "caramosq@gmail.com",
+    telefono: "3225489766",
+    ciudad: "Bogotá",
+    direccion: "Cll 85 # 25-56"
+  },
+  {
+    nombre: "Angelica Medina",
+    email: "aymedinaq@gmail.com",
+    telefono: "3136985241",
+    ciudad: "Girardot",
+    direccion: "Cra 4 # 5-23"
+  }
+])

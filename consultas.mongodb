@@ -1,0 +1,26 @@
+// SELECT
+db.clientes.find()
+
+// Inserción
+db.clientes.insertOne({
+  nombre: "Daniel Losada",
+  email: "danilosa@gmail.com",
+  telefono: "3502489632",
+  ciudad: "Medellin",
+  direccion: "Calle 5 # 12-38"
+})
+
+// Selección con filtro
+db.clientes.find({ ciudad: "Medellin" })
+
+
+// Actualización
+db.clientes.updateOne(
+  { email: "danilosa@gmail.com" },
+  { $set: { ciudad: "Cali" } }
+)
+
+// Eliminación
+db.clientes.deleteOne({
+  email: "danilosa@gmail.com"
+})

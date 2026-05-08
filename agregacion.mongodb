@@ -1,0 +1,62 @@
+// =====================================
+// CONSULTAS DE AGREGACIÓN
+// =====================================
+
+
+// 1. Contar total de productos
+db.productos.countDocuments()
+
+
+// 2. Contar productos por categoría
+db.productos.aggregate([
+  {
+    $group: {
+      _id: "$categoria",
+      totalProductos: { $sum: 1 }
+    }
+  }
+])
+
+
+// 3. Promedio de precios por categoría
+db.productos.aggregate([
+  {
+    $group: {
+      _id: "$categoria",
+      precioPromedio: { $avg: "$precio" }
+    }
+  }
+])
+
+
+// 4. Suma total del stock por categoría
+db.productos.aggregate([
+  {
+    $group: {
+      _id: "$categoria",
+      stockTotal: { $sum: "$stock" }
+    }
+  }
+])
+
+
+// 5. Precio mínimo por categoría
+db.productos.aggregate([
+  {
+    $group: {
+      _id: "$categoria",
+      precioMinimo: { $min: "$precio" }
+    }
+  }
+])
+
+
+// 6. Precio máximo por categoría
+db.productos.aggregate([
+  {
+    $group: {
+      _id: "$categoria",
+      precioMaximo: { $max: "$precio" }
+    }
+  }
+])
