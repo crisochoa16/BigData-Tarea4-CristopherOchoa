@@ -4,8 +4,6 @@
 
 Este proyecto consiste en el diseño e implementación de una base de datos NoSQL utilizando MongoDB para una tienda de periféricos Logitech.
 
-La base de datos permite administrar información de clientes, productos y pedidos realizados en la tienda. Se trabajó con colecciones y documentos en formato JSON/BSON, aprovechando la flexibilidad que ofrece MongoDB para manejar grandes volúmenes de información.
-
 ---
 
 # Caso de uso
