@@ -16,13 +16,6 @@ El sistema representa una tienda virtual especializada en periféricos Logitech,
 
 Cada cliente puede realizar pedidos de diferentes productos y el sistema almacena la información relacionada con las compras.
 
-MongoDB fue seleccionado debido a:
-
-- Flexibilidad en el manejo de documentos
-- Escalabilidad
-- Facilidad para trabajar con estructuras dinámicas
-- Soporte para agregaciones y consultas complejas
-
 ---
 
 # Colecciones implementadas
